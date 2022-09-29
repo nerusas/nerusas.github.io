@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NE RUSAS!</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <style>
+        :root {
+            --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            --background-color: #10151b;
+            --secondary-color: #1b2936;
+            --primary-color: #FB3640;
+            --tertiary-color: #B892FF;;
+            --text-color: #E2E2E2;
+        }
+
+        html {
+            box-sizing: border-box;
+            line-height: 1.75;
+            font-size: 1.25em;
+            font-family: var(--system-ui);
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ol,
+        ul {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        body {
+            padding: calc(1vmin + .5rem);
+            max-width: 38rem;
+            margin: auto;
+        }
+
+        html {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-end;
+        }
+
+        input,
+        textarea {
+            padding: .5rem;
+            background-color: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--background-color);
+            border-radius: .3rem;
+            width: 100%;
+            resize: none;
+        }
+
+        form button {
+            padding: .5rem;
+            width: 10rem;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border: 1px solid var(--background-color);
+            border-radius: .3rem;
+            font-weight: 600;
+        }
+
+        article {
+            padding: calc(1vmin + .5rem);
+            border-radius: 1rem;
+            background-color: var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        nav {
+            padding-left: 1rem;
+        }
+
+        nav h1 {
+            text-decoration: line-through;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        nav h1,
+        nav a {
+            line-height: 2rem;
+        }
+
+        nav p {
+            line-height: 1rem;
+            font-size: .7rem;
+            padding-left: 1rem
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+        }
+
+        .actions button {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: transparent;
+            border: none;
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+        }
+
+        @media (max-width: 800px) {
+            body {
+                width: 100%;
+            }
+
+            .actions button {
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("phrases-form").reset();
+        });
+    </script>
+</head>
+
+<body>
+    <nav>
+        <h1><a href="#">RUSAS</a></h1>
+        <p>Ei, nebuk oblius, keikis lietuviškai!</p>
+    </nav>
+    <article>
+        <h1><a href="#">Some phrase</a></h1>
+        <p>Some description</p>
+        <ul>
+            <li><q>Quote 1 blah blah blah</q></li>
+            <li><q>Quote 2 blah blah blah</q></li>
+            <li><q>Quote 3 blah blah blah</q></li>
+        </ul>
+        <div class="actions">
+            <button>👍</button>
+            <button>👎</button>
+        </div>
+    </article>
+    <article>
+        <h1><a href="#">Some phrase</a></h1>
+        <p>Some description</p>
+        <ul>
+            <li><q>Quote 1 blah blah blah</q></li>
+            <li><q>Quote 2 blah blah blah</q></li>
+            <li><q>Quote 3 blah blah blah</q></li>
+        </ul>
+        <div class="actions">
+            <button>👍</button>
+            <button>👎</button>
+        </div>
+    </article>
+    <article>
+        <h1><a href="#">Some phrase</a></h1>
+        <p>Some description</p>
+        <ul>
+            <li><q>Quote 1 blah blah blah</q></li>
+            <li><q>Quote 2 blah blah blah</q></li>
+            <li><q>Quote 3 blah blah blah</q></li>
+        </ul>
+        <div class="actions">
+            <button>👍</button>
+            <button>👎</button>
+        </div>
+    </article>
+    <article id="share">
+        <h1><a href="#share">Share your own</a></h1>
+        <form id="phrases-form"
+            action="https://script.google.com/macros/s/AKfycbzNOECMxsN4s8rq1jAb09-GsFYVl7hs7F3ykuSacollfTZQ1fVFWSATGRog4ThhXXbn-w/exec"
+            method="POST">
+            <input type="text" name="Name" placeholder="Name" required>
+            <input type="text" name="Description" placeholder="Description" required>
+            <textarea name="Usages" rows="5" cols="33" placeholder="Some usage examples" required></textarea>
+            <input type="text" name="Author" placeholder="Author" required>
+            <input type="text" name="Origin" value="NERUSAS" hidden />
+            <button type="submit">Submit</button>
+        </form>
+    </article>
+</body>
+
+</html>
